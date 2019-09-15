@@ -108,7 +108,8 @@ class App extends Component {
   }
 
   checkout() {
-    this.myCodeIsNotPerfect();
+
+    this.methodIsNotDefined();
 
     /*
       POST request to /checkout endpoint.
