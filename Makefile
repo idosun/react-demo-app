@@ -2,9 +2,8 @@
 # Following variable must be passed in
 # SENTRY_AUTH_TOKEN
 SENTRY_ORG=testorg-az
-SENTRY_PROJECT=react-demo-app
-#VERSION=`sentry-cli releases propose-version`
-VERSION=0b4151a2bdb3904f321439ae2155daf9b400ae10
+SENTRY_PROJECT=ido-react-hardware
+VERSION=`sentry-cli releases propose-version`
 PREFIX=static/js
 
 setup_release: create_release associate_commits upload_sourcemaps
