@@ -3,7 +3,8 @@
 # SENTRY_AUTH_TOKEN
 SENTRY_ORG=testorg-az
 SENTRY_PROJECT=react-demo-app
-VERSION=`sentry-cli releases propose-version`
+#VERSION=`sentry-cli releases propose-version`
+VERSION=0b4151a2bdb3904f321439ae2155daf9b400ae10
 PREFIX=static/js
 
 setup_release: create_release associate_commits upload_sourcemaps
