@@ -109,7 +109,7 @@ class App extends Component {
 
   checkout() {
 
-    //this.methodIsDefined();
+    this.methodUnDefined();
 
     /*
       POST request to /checkout endpoint.

@@ -3,7 +3,7 @@
 # SENTRY_AUTH_TOKEN
 SENTRY_ORG=testorg-az
 SENTRY_PROJECT=ido-react-hardware
-VERSION=c63aa88682eb46abdb026c7ae54e1a51f022a314 #`sentry-cli releases propose-version`
+VERSION=`sentry-cli releases propose-version`
 PREFIX=static/js
 
 setup_release: create_release associate_commits upload_sourcemaps
