@@ -26,14 +26,16 @@
   <script src="https://browser.sentry-cdn.com/5.6.3/bundle.min.js" crossorigin="anonymous"></script>
 
   <script>
+    
+
     Sentry.init({
       dsn: 'https://e4cf0097a4ce4eaf97f79337da2d207d@sentry.io/1727838',
       release: "%REACT_APP_RELEASE%",
-      environment: "prod",
+      environment: "%ENVIRONMENT%",
       beforeSend(event) {
-        // Check if it is an exception, if so, show the report dialog
-        if (event.exception) {
-          //Sentry.showReportDialog();
+        if (typeof(event.environment) !== undefined && 
+            event.environment === "Development") {
+          return null
         }
         return event;
       }

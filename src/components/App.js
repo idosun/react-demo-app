@@ -109,7 +109,7 @@ class App extends Component {
 
   checkout() {
 
-    //this.methodUnDefined();
+    this.methodUnDefined();
 
     /*
       POST request to /checkout endpoint.
@@ -146,6 +146,18 @@ class App extends Component {
         }
       }
     );
+  }
+
+
+  createErrorMsg(){
+    throw "[CollectionBookPage:" + this.createRandomString()+ "] " + 
+      "Profile " + this.createRandomString() + ":"  + this.createRandomString() +
+      " failed to load item "  + this.createRandomString() + " with template " +
+      "CollectionBookPage:"  + this.createRandomString() + " (not stash). Using default (blank) template."
+  }
+
+  createRandomString(){
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
 
   render() {
