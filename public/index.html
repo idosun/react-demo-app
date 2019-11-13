@@ -33,10 +33,10 @@
       release: "%REACT_APP_RELEASE%",
       environment: "%ENVIRONMENT%",
       beforeSend(event) {
-        if (typeof(event.environment) !== undefined && 
-            event.environment === "Development") {
-          return null
-        }
+        // if (typeof(event.environment) !== undefined && 
+        //     event.environment === "Development") {
+        //   return null
+        // }
         return event;
       }
     });
