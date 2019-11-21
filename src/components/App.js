@@ -109,7 +109,7 @@ class App extends Component {
 
   checkout() {
 
-    this.methodUnDefined();
+    this.methodIsDefined();
 
     /*
       POST request to /checkout endpoint.
@@ -126,7 +126,7 @@ class App extends Component {
     Sentry.configureScope(scope => {
       scope.setTag("transaction_id", transactionId);
     });
-    // perform request (set transctionID as header and throw error appropriately)
+    // perform request (set transactionID as header and throw error appropriately)
     request.post({
         url: `http://localhost:${PORT}/checkout`,
         json: order,
