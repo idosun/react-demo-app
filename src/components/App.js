@@ -107,10 +107,11 @@ class App extends Component {
       .then(json => console.log(json));
   }
 
+  getHelp(){
+    this.methodIsDefined();
+  }
+
   checkout() {
-
-    //this.methodIsDefined();
-
     /*
       POST request to /checkout endpoint.
         - Custom header with transactionId for transaction tracing
@@ -194,7 +195,7 @@ class App extends Component {
         </main>
         <div className="sidebar">
           <header>
-            <h4>Hi, {this.email}!</h4>
+              <h4>Hi, {this.email}!</h4>
           </header>
           <div className="cart">
             {this.state.cart.length ? (
@@ -244,6 +245,10 @@ class App extends Component {
               Empty cart
             </button>
           )}
+
+          <button onClick={this.getHelp} className="help-icon">
+            ?
+          </button>
         </div>
       </div>
     );

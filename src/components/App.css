@@ -196,3 +196,10 @@ main button {
   font-weight: normal;
   margin-left: 15px;
 }
+
+.help-icon{
+  background-color: transparent;
+  height: 2rem;
+  width: 3rem;
+  float: right;
+}
