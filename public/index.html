@@ -32,11 +32,7 @@
       dsn: 'https://e4cf0097a4ce4eaf97f79337da2d207d@sentry.io/1727838',
       release: "%REACT_APP_RELEASE%",
       environment: "production",
-      beforeSend(event) {
-        // if (typeof(event.environment) !== undefined && 
-        //     event.environment === "Development") {
-        //   return null
-        // }
+      beforeSend(event, hint) {
         return event;
       }
     });
