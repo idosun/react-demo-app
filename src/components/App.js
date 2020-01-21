@@ -150,18 +150,6 @@ class App extends Component {
     );
   }
 
-
-  createErrorMsg(){
-    throw "[CollectionBookPage:" + this.createRandomString()+ "] " + 
-      "Profile " + this.createRandomString() + ":"  + this.createRandomString() +
-      " failed to load item "  + this.createRandomString() + " with template " +
-      "CollectionBookPage:"  + this.createRandomString() + " (not stash). Using default (blank) template."
-  }
-
-  createRandomString(){
-    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-  }
-
   render() {
     const total = this.state.cart.reduce((t, i) => t + i.price, 0);
     const cartDisplay = this.state.cart.reduce((c, { id }) => {
