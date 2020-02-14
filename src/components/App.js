@@ -108,6 +108,13 @@ class App extends Component {
   }
 
   getHelp(){
+
+    Sentry.addBreadcrumb({
+      category: 'Get Help',
+      message: 'User clicked on get help icon',
+      level: 'info'
+    });
+
     this.methodUnDefined();
   }
 
