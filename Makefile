@@ -5,8 +5,9 @@ SENTRY_ORG=testorg-az
 SENTRY_PROJECT=ido-react-store
 VERSION=`sentry-cli releases propose-version`
 PREFIX=static/js
+ENVIRONMENT=Production
 
-setup_release: create_release associate_commits upload_sourcemaps
+setup_release: create_release associate_commits upload_sourcemaps deploy_release
 
 create_release:
 	sentry-cli releases -o $(SENTRY_ORG) new -p $(SENTRY_PROJECT) $(VERSION)
@@ -18,3 +19,6 @@ associate_commits:
 upload_sourcemaps:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) files $(VERSION) \
 		upload-sourcemaps --no-rewrite --url-prefix "~/$(PREFIX)" --validate build/$(PREFIX)
+
+deploy_release:
+	sentry-cli releases -o $(SENTRY_ORG) deploys $(VERSION) new -e $(ENVIRONMENT)

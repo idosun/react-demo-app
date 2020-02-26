@@ -6,6 +6,10 @@ if [[ $1 == 'aspnet' ]]
     then REACT_APP_PORT=5001 npm run deploy;
 fi
 
+if [[ $1 == 'go' ]]
+    then REACT_APP_PORT=3002 npm run deploy;
+fi
+
 if [[ $1 == 'express' ]]
     then REACT_APP_PORT=3001 npm run deploy;
 fi
