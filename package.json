@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sentry/cli": "^1.47.1",
+    "@sentry/cli": "^1.51.1",
     "history": "^1.17.0",
     "material-ui": "^0.18.7",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-router": "^1.0.3",
     "react-scripts": "1.0.10",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "serve": "^10.1.2"
   },
   "scripts": {
@@ -23,7 +23,7 @@
     "test": "jest --config jest.config.json"
   },
   "devDependencies": {
-    "@sentry/browser": "^5.11.2",
+    "@sentry/browser": "^5.12.4",
     "gh-pages": "^1.2.0",
     "sentry-testkit": "^3.2.1",
     "wait-for-expect": "^1.1.0"

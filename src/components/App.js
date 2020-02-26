@@ -115,7 +115,7 @@ class App extends Component {
       level: 'info'
     });
 
-    this.methodIsDefined();
+    this.methodUnDefined();
   }
 
 
