@@ -23,15 +23,16 @@
   <title>Sentry Demo</title>
 
   <!-- Import SDK -->
-  <script src="https://browser.sentry-cdn.com/5.11.1/bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://browser.sentry-cdn.com/5.15.0/bundle.min.js" crossorigin="anonymous"></script>
 
   <script>
     
 
     Sentry.init({
-      dsn: 'https://50e623122fab45d5b16ec3fd82357ecd@sentry.io/1890423',
+      dsn: 'https://e8c44fa8b3b348208ad73c73d5c1b039@sentry.io/1529740',
       release: "%REACT_APP_RELEASE%",
       environment: "production",
+      attachStacktrace: true,
       beforeSend(event, hint) {
         return event;
       }

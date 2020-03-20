@@ -2,7 +2,7 @@
 # Following variable must be passed in
 # SENTRY_AUTH_TOKEN
 SENTRY_ORG=testorg-az
-SENTRY_PROJECT=ido-react-store
+SENTRY_PROJECT=ido-react-hardware
 VERSION=`sentry-cli releases propose-version`
 PREFIX=static/js
 ENVIRONMENT=Production

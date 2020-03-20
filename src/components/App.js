@@ -1,4 +1,6 @@
 /*global Sentry*/
+
+
 import React, { Component } from "react";
 import "./App.css";
 import wrenchImg from "../assets/wrench.png";
@@ -119,12 +121,8 @@ class App extends Component {
   }
 
 
-  checkout() {
-    /*
-      POST request to /checkout endpoint.
-        - Custom header with transactionId for transaction tracing
-        - throw error if response !== 200
-    */
+  async checkout() {
+    
     const order = {
       email: this.email,
       cart: this.state.cart
@@ -135,6 +133,7 @@ class App extends Component {
     Sentry.configureScope(scope => {
       scope.setTag("transaction_id", transactionId);
     });
+
     // perform request (set transactionID as header and throw error appropriately)
     request.post({
         url: `http://localhost:${PORT}/checkout`,
@@ -145,9 +144,9 @@ class App extends Component {
 
         }
       }, (error, response) => {
-        if (error) {
-          throw error;
-        }
+        // if (error) {
+        //   throw error;
+        // }
         if (response.statusCode === 200) {
           this.setState({ success: true });
         } else {
