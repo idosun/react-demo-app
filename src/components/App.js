@@ -66,7 +66,7 @@ class App extends Component {
     // Add context to error/event
     Sentry.configureScope(scope => {
       scope.setUser({ email: this.email }); // attach user/email context
-      scope.setTag("customerType", "medium-plan"); // custom-tag
+      scope.setTag("customer-type", "medium-plan"); // custom-tag
     });
 
     //Will add an XHR Sentry breadcrumb
