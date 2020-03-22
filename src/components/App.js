@@ -12,6 +12,8 @@ const request = require('request');
 
 const monify = n => (n / 100).toFixed(2);
 const getUniqueId = () => '_' + Math.random().toString(36).substr(2, 9);
+const customerTypes = ["enterprise", "business", "team", "trial"];
+
 
 class App extends Component {
   constructor(props) {
@@ -66,7 +68,8 @@ class App extends Component {
     // Add context to error/event
     Sentry.configureScope(scope => {
       scope.setUser({ email: this.email }); // attach user/email context
-      scope.setTag("customer-type", "medium-plan"); // custom-tag
+      var randomIdx = Math.floor((Math.random() * 4) + 1)
+      scope.setTag("customer_type", customerTypes[randomIdx]); // custom-tag
     });
 
     //Will add an XHR Sentry breadcrumb
