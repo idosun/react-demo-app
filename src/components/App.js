@@ -68,7 +68,7 @@ class App extends Component {
     // Add context to error/event
     Sentry.configureScope(scope => {
       scope.setUser({ email: this.email }); // attach user/email context
-      var randomIdx = Math.floor((Math.random() * 4) + 1)
+      var randomIdx = Math.floor((Math.random() * 4))
       scope.setTag("customer_type", customerTypes[randomIdx]); // custom-tag
     });
 
