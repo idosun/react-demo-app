@@ -1,11 +1,12 @@
 # Must have `sentry-cli` installed globally
-# Following variable must be passed in
-# SENTRY_AUTH_TOKEN
+# SENTRY_AUTH_TOKEN variable must be set in your bash profile or as an env variable.
+# To generate an Org Auth token, create a new app in our integration platform as described here:
+# https://docs.sentry.io/workflow/integrations/integration-platform/#auth-tokens-1
 SENTRY_ORG=testorg-az
 SENTRY_PROJECT=ido-react-hardware
 VERSION=`sentry-cli releases propose-version`
 PREFIX=static/js
-ENVIRONMENT=Staging
+ENVIRONMENT=Production
 
 setup_release: create_release associate_commits upload_sourcemaps deploy_release
 
