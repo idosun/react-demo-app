@@ -144,6 +144,7 @@ class App extends Component {
         headers: {
           "X-Session-ID": this.sessionId,
           "X-Transaction-ID": transactionId
+          
         }
       }, (error, response) => {
         // if (error) {
