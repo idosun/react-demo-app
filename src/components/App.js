@@ -120,7 +120,7 @@ class App extends Component {
       level: 'info'
     });
 
-    this.methodUnDefined();
+    this.methodIsDefined();
   }
 
 
