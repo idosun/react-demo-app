@@ -29,3 +29,8 @@ fi
 if [[ $1 == 'spring' ]]
     then REACT_APP_PORT=8080 npm run deploy;
 fi
+
+
+if [[ $1 == 'django' ]]
+    then REACT_APP_PORT=8000 npm run deploy;
+fi
