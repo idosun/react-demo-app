@@ -36,6 +36,9 @@
       environment: "staging",
       beforeSend(event, hint) {
         return event;
+      },
+      beforeBreadcrumb(bc, hint){
+        return bc;
       }
     });
   </script>

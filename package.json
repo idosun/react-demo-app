@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sentry/cli": "^1.47.1",
+    "@sentry/cli": "^1.55.1",
     "ajv": "^5.5.2",
     "history": "^1.17.0",
     "lightstep-tracer": "^0.28.0",

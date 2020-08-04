@@ -123,7 +123,7 @@ class App extends Component {
       level: 'info'
     });
 
-    //this.methodUnDefined();
+    this.methodUnDefined();
   }
 
 
@@ -146,8 +146,11 @@ class App extends Component {
         json: order,
         headers: {
           "X-Session-ID": this.sessionId,
-          "X-Transaction-ID": transactionId
-          
+          "X-Transaction-ID": transactionId,
+          "password": "1234",
+          "Password": "56787",
+          "repeatPassword": "ABCD",
+          "PasswordRepeat": "EFGH"
         }
       }, (error, response) => {
         // if (error) {
