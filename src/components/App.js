@@ -73,6 +73,9 @@ class App extends Component {
      }); // attach user/email context
       var randomIdx = Math.floor((Math.random() * 4))
       scope.setTag("customer_type", customerTypes[randomIdx]); // custom-tag
+
+      scope.setTag("cc_number", "1234-5678-8765-4321"); 
+      scope.setExtra('payment_id', "1234567887654321");
     });
 
     //Will add an XHR Sentry breadcrumb
@@ -149,8 +152,7 @@ class App extends Component {
           "X-Transaction-ID": transactionId,
           "password": "1234",
           "Password": "56787",
-          "repeatPassword": "ABCD",
-          "PasswordRepeat": "EFGH"
+          "repeatPassword": "ABCD"
         }
       }, (error, response) => {
         // if (error) {
