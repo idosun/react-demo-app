@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@sentry/browser": "^5.12.4",
+    "axios": "^0.21.0",
     "gh-pages": "^1.2.0",
     "sentry-testkit": "^3.2.1",
     "wait-for-expect": "^1.1.0"

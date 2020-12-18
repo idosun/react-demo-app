@@ -6,7 +6,7 @@ SENTRY_ORG=testorg-az
 SENTRY_PROJECT=ido-react-hardware
 VERSION=`sentry-cli releases propose-version`
 PREFIX=static/js
-ENVIRONMENT=Staging
+ENVIRONMENT=Canary
 
 setup_release: create_release associate_commits upload_sourcemaps deploy_release
 

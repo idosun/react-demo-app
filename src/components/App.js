@@ -9,6 +9,7 @@ import hammerImg from "../assets/hammer.png";
 
 const PORT = process.env.REACT_APP_PORT || 3001
 const request = require('request');
+const axios = require('axios');
 
 const monify = n => (n / 100).toFixed(2);
 const getUniqueId = () => '_' + Math.random().toString(36).substr(2, 9);
@@ -74,6 +75,8 @@ class App extends Component {
       var randomIdx = Math.floor((Math.random() * 4))
       scope.setTag("customer_type", customerTypes[randomIdx]); // custom-tag
 
+      
+
       scope.setTag("cc_number", "1234-5678-8765-4321"); 
       scope.setExtra('payment_id', "1234567887654321");
     });
@@ -116,6 +119,19 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
       .then(json => console.log(json));
+
+      // axios.options('https://jsonplaceholder.typicode.com/todos/1')
+      //   .then(function (response) {
+      //     // handle success
+      //     console.log(response);
+      //   })
+      //   .catch(function (error) {
+      //     // handle error
+      //     console.log(error);
+      //   })
+      //   .then(function () {
+      //     // always executed
+      //   });
   }
 
   getHelp(){
@@ -126,7 +142,7 @@ class App extends Component {
       level: 'info'
     });
 
-    //this.methodUnDefined();
+    this.methodUnDefined();
   }
 
 
