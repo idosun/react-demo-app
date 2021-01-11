@@ -33,6 +33,7 @@
     Sentry.init({
       dsn: "https://8d5dd2029927418497cc1749fac1c8f2@o87286.ingest.sentry.io/1727838",
       release: "%REACT_APP_RELEASE%",
+      attachStacktrace: true,
       environment: "staging",
       beforeSend(event, hint) {
         return event;

@@ -141,7 +141,7 @@ class App extends Component {
       message: 'User clicked on get help icon',
       level: 'info'
     });
-
+      //Sentry.captureMessage("test issue state: " + Math.floor(Math.random() * 10000))
     this.methodUnDefined();
   }
 
