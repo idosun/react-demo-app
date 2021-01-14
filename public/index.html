@@ -24,7 +24,7 @@
 
   <!-- Import SDK -->
   <script
-  src="https://browser.sentry-cdn.com/5.27.4/bundle.min.js"
+  src="https://browser.sentry-cdn.com/5.30.0/bundle.min.js"
   integrity="sha384-yUnxX3o5D7+yEEIKDXlpygg+0Q2LdyklXwZVWUjc6fohGisYvhpyQbRvNYaDGtvU"
   crossorigin="anonymous"
 ></script>
@@ -34,6 +34,7 @@
       dsn: "https://8d5dd2029927418497cc1749fac1c8f2@o87286.ingest.sentry.io/1727838",
       release: "%REACT_APP_RELEASE%",
       attachStacktrace: true,
+      autoSessionTracking: true,
       environment: "staging",
       beforeSend(event, hint) {
         return event;
