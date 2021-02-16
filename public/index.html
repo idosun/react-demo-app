@@ -23,9 +23,9 @@
   <title>Sentry Demo</title>
 
   <!-- Import SDK -->
-  <script
-  src="https://browser.sentry-cdn.com/5.30.0/bundle.min.js"
-  integrity="sha384-yUnxX3o5D7+yEEIKDXlpygg+0Q2LdyklXwZVWUjc6fohGisYvhpyQbRvNYaDGtvU"
+<script
+  src="https://browser.sentry-cdn.com/6.1.0/bundle.min.js"
+  integrity="sha384-T4wn6EUhrkGRYp9a0X2/uXu6frHKrfbSeO4zRRA4KIgrEaJMMRbpunhBtNahdsxW"
   crossorigin="anonymous"
 ></script>
     
@@ -35,6 +35,7 @@
       release: "%REACT_APP_RELEASE%",
       attachStacktrace: true,
       autoSessionTracking: true,
+      debug: true,
       environment: "staging",
       beforeSend(event, hint) {
         return event;
