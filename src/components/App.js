@@ -122,7 +122,9 @@ class App extends Component {
 
   }
 
-  getHelp(){
+  
+
+   getHelp(){
 
     Sentry.addBreadcrumb({
       category: 'Get Help',
