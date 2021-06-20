@@ -23,20 +23,29 @@
   <title>Sentry Demo</title>
 
   <!-- Import SDK -->
+  <script
+  src="https://browser.sentry-cdn.com/6.2.5/bundle.min.js"
+  integrity="sha384-+0tgGyP4idWu9/NA6Jbmnj3SApxIg65/GR1zo3qSieRNyzmmDQ/5a1Yu6mfmUw+v"
+  crossorigin="anonymous"
+></script>
 <script
-  src="https://browser.sentry-cdn.com/6.1.0/bundle.min.js"
-  integrity="sha384-T4wn6EUhrkGRYp9a0X2/uXu6frHKrfbSeO4zRRA4KIgrEaJMMRbpunhBtNahdsxW"
+  src="https://browser.sentry-cdn.com/6.2.5/bundle.tracing.min.js"
+  integrity="sha384-xd/W0P7puokZpoEqk4srLDzK5R0WV2B2IZVlA0T4MEU4Fojxk+o+5KF6u43wkTL6"
   crossorigin="anonymous"
 ></script>
     
 <script>
+  const tracingOrigins = [
+    'localhost', 
+    /^\//
+  ];
     Sentry.init({
       dsn: "https://8d5dd2029927418497cc1749fac1c8f2@o87286.ingest.sentry.io/1727838",
       release: "%REACT_APP_RELEASE%",
       attachStacktrace: true,
-      autoSessionTracking: true,
-      debug: true,
       environment: "staging",
+      integrations: [new Sentry.Integrations.BrowserTracing()],
+      tracesSampleRate: 1.0,
       beforeSend(event, hint) {
         return event;
       },
@@ -44,15 +53,6 @@
         return bc;
       }
     });
-
-    // Sentry.configureScope(function(scope) {
-    //   scope.addEventProcessor(function(event, hint) {
-    //     // Add anything to the event here
-    //     // returning null will drop the event
-    //     debugger;
-    //     return event;
-    //   });
-    // }); 
 
 
   </script>

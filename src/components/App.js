@@ -75,10 +75,6 @@ class App extends Component {
       var randomIdx = Math.floor((Math.random() * 4))
       scope.setTag("customer_type", customerTypes[randomIdx]); // custom-tag
 
-      
-
-      scope.setTag("cc_number", "1234-5678-8765-4321"); 
-      scope.setExtra('payment_id', "1234567887654321");
     });
 
     //Will add an XHR Sentry breadcrumb
