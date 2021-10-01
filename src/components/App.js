@@ -68,10 +68,11 @@ class App extends Component {
     };
     // Add context to error/event
     Sentry.configureScope(scope => {
+      // attach user/email context
       scope.setUser({ 
         email: this.email,
         user_language: "en"
-     }); // attach user/email context
+     }); 
       var randomIdx = Math.floor((Math.random() * 4))
       scope.setTag("customer_type", customerTypes[randomIdx]); // custom-tag
 
@@ -121,7 +122,6 @@ class App extends Component {
   
 
    getHelp(){
-
     Sentry.addBreadcrumb({
       category: 'Get Help',
       message: 'User clicked on get help icon',
