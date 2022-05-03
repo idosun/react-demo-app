@@ -129,6 +129,8 @@ class App extends Component {
     });
 
     this.methodUnDefined();
+
+    
   }
 
 

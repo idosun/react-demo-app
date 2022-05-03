@@ -16,8 +16,6 @@ create_release:
 
 associate_commits:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --auto $(VERSION)
-#	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --initial-depth 1 --commit idosun/react-demo-app@9c2cf5550eb2f1edf52e9960f8d0022218925be9 --commit idosun/react-demo-app@b1847a5f5c2a7e929b22c0b2c454143cc0575c48 $(VERSION)
-# sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) set-commits --commit "idosun/react-demo-app@f92fab9a247cf6b08afdcd7a2a3f2edc6f8c4739..ea21dfbfddcc1df99916fe8c979c136cf374193c" $(VERSION)
 
 upload_sourcemaps:
 	sentry-cli releases -o $(SENTRY_ORG) -p $(SENTRY_PROJECT) files $(VERSION) \
